@@ -1,0 +1,10 @@
+<table cellpadding="10" cellspacing="10">
+	<% CHOICES.each do |id, text|%>
+		<tr>
+			<th><%= text %></th>
+			<td><%= @votes[id] %></td>
+			<td><%= '#' * (@votes[id] || 0) %></td>
+		</tr>
+	<% end %>
+</table>
+<p><a href="/">На главную страницу</a></p>

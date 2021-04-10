@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Что вы хотите на ужин?</h1>
+	<form action='cast' method='post'>
+		<ul>
+			<% CHOICES.each do |id, text| %>
+				<li>
+					<label>
+						<input type='radio' name='vote' value='<%= id %>' id='vote_<%= id %>' />
+						<%= text %>
+					</label>
+				</li>
+			<% end %>
+		</ul>
+		<button type='submit'>Сделать выбор</button>
+	</form>
+</body>
+</html>
